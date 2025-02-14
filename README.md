@@ -15,12 +15,16 @@ C++ skills.
  - C++ 23  
  - gcc 12  
  - QT 6.8  
- - CMake 3.31
+ - CMake 3.31  
+ 
 
- # Requirements  
+# Requirements  
   - Allow the user to specify a project  
   - Based on the project type (programming language(s) and build type) collect all the source files from the directories.
   - Allow the user to specify which files should be included in the question.
   - Allow the user to specify the order of the files to be presented.
   - Generate the Markdown source for the source files in a text file (user can specify if it is a .txt file or a .md file).
   - Allow the user to add headings and text at the top of the question file.
+
+# Design  
+The project is initial conceived as a Model View View Model (MVVM) architecture. It will have one or more dialogues. The primary user interface will be a dialog.
