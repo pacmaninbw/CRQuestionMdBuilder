@@ -2,6 +2,8 @@
 #define CRMDBUILDERMODEL_H_
 
 #include <filesystem>
+#include "MainDialogErrorCode.h"
+#include "MainDialogInitStruct.h"
 #include <QObject>
 #include <QString>
 #include <string>
@@ -26,6 +28,13 @@ private slots:
 
 
 private:
+
+/*
+ * Private Variables
+ */
+    std::string sourceDirectory;
+    std::string questionFileName = "MyCodeReviewQuestion";
+    std::string questionFileExtension = "txt";
 
 };
 

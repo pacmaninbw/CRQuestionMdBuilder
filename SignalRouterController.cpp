@@ -10,6 +10,13 @@ SignalRouterController::SignalRouterController(const char* objectName, QObject *
 
 void SignalRouterController::createModel()
 {
+    model = new CrMdBuilderModel("model", this);
+}
+
+void SignalRouterController::createMainDialog()
+{
+    mainDialog = new MainDialog();
+    mainDialog->setObjectName("mainDialog");
 }
 
 void SignalRouterController::connectControllerAndModelSignalsToSlots()

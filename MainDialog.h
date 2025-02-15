@@ -4,10 +4,14 @@
 #include "createNamedQTWidget.h"
 #include "DirectoryLineEdit.h"
 #include "MainDialogErrorCode.h"
+#include "MainDialogInitStruct.h"
 #include "NumericLineEdit.h"
 #include <QVariant>
 #include <QDialog>
 #include <QDialogButtonBox>
+#include <QGroupBox>
+#include <QLineEdit>
+#include <QRadioButton>
 
 class MainDialog : public QDialog
 {
@@ -39,7 +43,11 @@ private:
  * Widget Declarations
  */
     DirectoryLineEdit* sourceDirectoryLineEdit;
+    QLineEdit* questionFileNameLineEdit;
     NumericLineEdit* MyLineEdit;
+    QGroupBox* questionFileTypeGroupBox;
+    QRadioButton* questioFileTypeTextRadioButton;
+    QRadioButton* questioFileTypeMarkDownRadioButton;
 
 /*
  * Private Variables

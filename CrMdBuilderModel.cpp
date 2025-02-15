@@ -7,8 +7,11 @@ CrMdBuilderModel::CrMdBuilderModel(const char* modelName, QObject *parent)
     setObjectName(QString::fromUtf8(modelName));
 
     QString startDir = QDir::homePath();
+    sourceDirectory = startDir.toStdString();
 }
 
 /*
  * Slots
  */
+
+ 

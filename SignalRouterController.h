@@ -1,6 +1,8 @@
 #ifndef SIGNALROUTERCONTROLLER_H_
 #define SIGNALROUTERCONTROLLER_H_
 
+#include "CrMdBuilderModel.h"
+#include "MainDialog.h"
 #include <QObject>
 #include <QString>
 
@@ -19,6 +21,7 @@ public:
     explicit SignalRouterController(const char * controllerName, QObject *parent = nullptr);
     ~SignalRouterController() = default;
     void createModel();
+    void createMainDialog();
     void connectControllerAndModelSignalsToSlots();
 
 public slots:
@@ -31,6 +34,11 @@ private slots:
 
 private:
 
+/*
+ * Private Variables
+ */
+    CrMdBuilderModel* model;
+    MainDialog* mainDialog;
 };
 
 #endif // SIGNALROUTERCONTROLLER_H_

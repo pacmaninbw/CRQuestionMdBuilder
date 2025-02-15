@@ -22,6 +22,7 @@ set(PROJECT_SOURCES
         CrMdBuilderModel.h
         CrMdBuilderModel.cpp
         MainDialogErrorCode.h
+        MainDialogInitStruct.h
         MainDialog.h
         MainDialog.cpp
         WidgetExtensions/DirectoryLineEdit.h

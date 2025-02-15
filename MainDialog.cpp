@@ -6,12 +6,13 @@
 #include <QAbstractButton>
 #include <QDialog>
 #include <QDialogButtonBox>
+#include <QFormLayout>
 #include <QMessageBox>
 
 MainDialog::MainDialog(QWidget *parent) :
     QDialog(parent)
 {
-    setObjectName(QString::fromUtf8("MainDialog"));
+    setObjectName(QString::fromUtf8("mainDialog"));
 
     setUpDialogUI();
 

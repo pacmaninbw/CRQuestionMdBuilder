@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
     SignalRouterController routerController("TheController");
     routerController.createModel();
     routerController.connectControllerAndModelSignalsToSlots();
+    routerController.createMainDialog();
         
     return theApp.exec();
 }
