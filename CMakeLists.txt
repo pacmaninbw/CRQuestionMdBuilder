@@ -14,10 +14,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic")
+
 set(PROJECT_SOURCES
         main.cpp
+        WidgetExtensions/createNamedQTWidget.h
         CrMdBuilderModel.h
         CrMdBuilderModel.cpp
+        MainDialogErrorCode.h
+        MainDialog.h
+        MainDialog.cpp
+        WidgetExtensions/DirectoryLineEdit.h
+        WidgetExtensions/NumericLineEdit.h
         SignalRouterController.h
         SignalRouterController.cpp
 )
@@ -45,7 +53,9 @@ else()
     endif()
 endif()
 
-target_link_libraries(CRQuestionMdBuilder PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${OpenCV_LIBS})
+target_include_directories(CRQuestionMdBuilder PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/WidgetExtensions)
+
+target_link_libraries(CRQuestionMdBuilder PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
 set_target_properties(CRQuestionMdBuilder PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
