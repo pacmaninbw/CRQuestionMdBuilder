@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     routerController.createModel();
     routerController.connectControllerAndModelSignalsToSlots();
     routerController.createMainDialog();
+    routerController.connectMainDialogSignalsAndSlots();
         
     return theApp.exec();
 }

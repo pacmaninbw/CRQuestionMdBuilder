@@ -23,7 +23,9 @@ void SignalRouterController::connectControllerAndModelSignalsToSlots()
 {
 }
 
-
+void SignalRouterController::connectMainDialogSignalsAndSlots()
+{
+}
 
 /*
  * Slots

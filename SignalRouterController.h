@@ -23,6 +23,7 @@ public:
     void createModel();
     void createMainDialog();
     void connectControllerAndModelSignalsToSlots();
+    void connectMainDialogSignalsAndSlots();
 
 public slots:
 
